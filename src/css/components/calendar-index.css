@@ -1,0 +1,60 @@
+.calendar__index-container {
+    display: inline-block;
+}
+.calendar__index {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+
+}
+.arrow-container {
+    line-height: 60px;
+}
+.arrow {
+    display: inline-block;
+    color: var(--arrow-color);
+    cursor: pointer;
+    line-height: normal;
+    vertical-align: middle;
+    
+}
+.arrow:hover {
+    color: var(--arrow-color--hover);
+}
+.arrow i {
+    font-size: var(--arrow-size);
+}
+
+
+
+.index__break {
+    padding: 10px;
+}
+
+.calendar__index__position {
+    text-align: right;
+    font-size: 14px;
+    padding: 2px;
+    width: 80px;
+}
+
+.index__jump-btn {
+    display: inline-block;
+    border-radius: 2px;
+    border: 2px solid var(--index__jmp-btn-color);
+    color: var(--index__jmp-btn-color);
+    background-color: var(--index__jmp-btn-background-color);
+    margin: 5px;
+    cursor: pointer;
+    padding: 3px 14px;
+    line-height: 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: Josefin Sans;
+}
+
+.index__jump-btn:hover {
+    color: var(--index__jmp-btn--hover-background-color);
+    background-color: var(--index__jmp-btn--hover-color);
+}

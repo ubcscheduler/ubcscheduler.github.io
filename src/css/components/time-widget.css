@@ -1,0 +1,48 @@
+.time-widget__terms {
+    margin-top: 10px;
+}
+.time-widget__term {
+    font-size: 12px;
+}
+.time-widget__days {
+    margin: 20px;    
+}
+.time-widget__day {
+    display: inline-block;
+    padding: 7px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 0px 3px;
+    font-size: 12px;
+    font-weight: 500;
+    width: 40px;
+}
+.time-widget__btn--selected {
+    background-color: var( --time-widget__btn--selected-color);
+    color: #FFF;
+}
+
+.time-widget__input-container > * {
+    margin: 5px;
+}
+
+.time-widget__input {
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+}
+
+span.time-widget__span {
+    color: var(--course-container-color);
+}
+.time-widget__add-btn {
+    font-size: 11px;
+    padding: 3px 12px;
+    margin: 15px 5px;
+}
+.time-widget__add-btn > i {
+    margin-right: 5px;
+}
+.time-widget__add-btn:hover {
+    color: #fff;
+}

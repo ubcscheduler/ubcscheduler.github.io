@@ -1,0 +1,52 @@
+.search-tool {
+    font-family: Montserrat;
+}
+    .search__input {
+        padding-left: 40px;
+        width: 100%;
+        border: 0;
+        height: 40px;
+        background: url(../../img/glass.png) center left 7.5px no-repeat;
+        background-size: 25px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        outline: 0;
+        font-size: 10px;
+        box-sizing: border-box;
+        float: left;
+        background-color: #FFF;
+        border: 1px solid var(--search__result-border-color);
+    }
+    .search__result-wrapper {
+        display: inline-block;
+        background-color: #FFF;
+        border-top: 1px solid var(--search__result-border-color);
+        padding: 0;
+        width: 100%;
+        float: left;
+    }
+    .search__result{
+        border-bottom: 1px solid var(--search__result-border-color);
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        float: left;
+    }
+    .search__result__head {
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-align: left;
+        width: 100%;
+    }
+    .search__result__body {
+        font-size: 10px;
+        color: var( --course-container-color);
+        float: left;
+    }
+    .search__result:hover{
+        background-color: var(--search__result--hover-color);
+        cursor: pointer;
+    }
+    .search__result--hover{
+        background-color: var(--search__result--index-hover-color);
+    }

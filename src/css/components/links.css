@@ -1,0 +1,30 @@
+.links__container {    
+    position: absolute;
+    right: 0px;
+    display: inline-block;
+    line-height: 50px;
+}
+.links__container > span {
+    font-family: Josefin Sans;
+    font-weight: 500;
+}
+
+.github__linkWrap {
+    float: right;
+}
+.github__link {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-left: 10px;
+    margin-right: 15px;
+    background-image: url(../../img/Octocat.png);
+    background-size: 45px 45px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.github__link:hover {
+    cursor: pointer;
+}

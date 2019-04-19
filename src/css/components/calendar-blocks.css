@@ -1,0 +1,70 @@
+.calendar__blocks {
+    position: absolute;
+    top: var(--calendar__row--days-height);
+    left: 8%;
+    width: 92%;
+    height: calc(100% - var(--calendar__row--days-height));
+    pointer-events:none;
+}
+
+
+.block__daycol {
+    width: calc(100% / 5);
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    pointer-events: none;
+}
+
+.block__section {
+    position: absolute;
+    color: #FFF;
+    border-radius: 5px;
+    font-size: var(--block__section-font-size);
+    padding: 2px;
+    box-sizing: border-box;
+    display: table;
+    width: 100%;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.block__section--locked .block__section__lock {
+    display: inline-block;
+}
+
+.block__section__lock {
+    display: none;
+    position:absolute;
+    top:0px;
+    right:0px;        
+}
+.block__section__lock i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--block__section-lock-size);
+    padding: 4px;
+}
+
+.block__section span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.calendar__row {
+    
+}
+.calendar__row--days {
+    height: var(--calendar__row--days-height);
+    text-transform: uppercase;
+}
+.calendar__block {
+    width: calc(92% / 5);
+    height: var(--calendar__row-height);
+    padding: 0px;
+    background-color: #FFF;
+}
+.calendar__block--break {
+    background-color: #ccc;
+}
+.calendar__block--time {
+    width: 8%;
+}

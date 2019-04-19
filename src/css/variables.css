@@ -1,0 +1,49 @@
+:root {
+    --header-background-color: #353a52;
+
+    --course-container-color: #525252;
+    --search__result--hover-color: #afcce6;
+    --search__result--index-hover-color: #9db6cc;
+    --search__result-border-color: #EEE;
+    --course__button--selected-color: rgba(255,255,255,0.2); 
+    --remove-btn-color: rgba(0, 0, 0, 0.7);
+    --btn--hover-color: #9c9c9c;
+    --btn--blue-color: #1b305a;
+    --btn--blue--hover-color: #3e5480;
+    --btn--blue--selected-color: #1b305a;
+
+    --header-background-color: #353a52;
+    --calendar-background-color: #fdfdfd;
+    --calendar-color: #000;
+    
+    
+    
+    --save__btn-color: #ffafaf;
+    --calendar__term-background-color: #fff;
+    --calendar__term-color: #949494;
+    --calendar__term--hover-color: #616161;
+    --time-widget__btn--selected-color: rgba(0,0,0,0.15); 
+
+    --arrow-color: rgb(5, 150, 255);
+    --arrow-color--hover: rgb(0, 83, 144);
+
+    --index__jmp-btn-color: #0596ff;
+    --index__jmp-btn-background-color: #fff;
+    --index__jmp-btn--hover-color: #0596ff;
+    --index__jmp-btn--hover-background-color: #fff;
+
+    --instruction__footer--hover-color: #1b1b1b;
+    --instruction__footer-color: #424242;
+    
+    --calendar__row--days-height: 30px;
+    --calendar__row-height: 25px;
+    --block__section-font-size: 11px;
+    --block__section-lock-size: 18px;
+    --arrow-size: 50px;
+
+    --register__indicator-color: grey;
+    --register__indicator--clicked-color: #4CAF50;
+
+    --side-panel--background-color: #fdfdfd;
+    --instruction__content-color: #78b4f1;
+}

@@ -1,0 +1,74 @@
+.course {
+    display: inline-block;
+    margin: 2.5px;
+    font-family: Montserrat;
+    font-size: 10px;
+    letter-spacing: 1px;
+    background-color: #AAA;
+    color: #FFF;
+    padding: 7.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0,0,0,.3);
+    transition: width .25s;
+}
+.course--active{
+    width: 250px;
+    min-height: 100px;
+    transition: width .25s;
+}
+.course__button {
+    padding: 5px;
+    color: #000;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 3px;
+    background-color: #FFF;
+    border: 1px solid transparent;
+    transition: background-color .25s;
+}
+.course__button:hover {
+    background-color: transparent;
+    color: #FFF;
+    border-color: #FFF;
+    transition: background-color .25s;
+}
+.course__button--selected {
+    background-color: var(--course__button--selected-color); 
+    color: #FFF;
+}
+.course__code {
+    font-size: 13px;
+}
+.course__term {
+    text-transform: uppercase;
+}
+.course__term--selected {
+    background-color: var(--course__button--selected-color);
+    color: #FFF;
+}
+
+
+.course__sections__activity {
+    width: 100%;
+    text-align: left;
+}
+.course__sections {
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+
+.course__waitlist-filter {
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.course__container {
+    display: none;
+}
+.course__container--active {
+    display: block;
+}

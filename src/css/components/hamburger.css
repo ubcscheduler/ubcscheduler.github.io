@@ -1,0 +1,33 @@
+.hamburger {
+    position: absolute;
+    width: 100%;
+    z-index: 1020;
+    text-align: left;
+}
+.hamburger > div {
+    text-align: center;
+}
+.hamburger__logo {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 20px;
+}
+.hamburger__logo:hover {
+    color: #0596ff;
+}
+
+.hamburger__logo > i {
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.hamburger__content {
+    display: none;
+    transition: max-height 2s ease-out;
+    box-shadow: 0px 2px 2px #eee;
+}
+.hamburger__content--active {
+    display: block;
+    transition: max-height 2s ease-in;
+}

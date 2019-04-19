@@ -1,0 +1,40 @@
+.saved-schedules {
+    text-align: center;
+    /* border-bottom: 1px solid #ececec; */
+}
+
+.saved-schedules__container {
+    display: inline-block;
+    width: 100%;
+}
+.save__btn {
+    display: inline-block;
+    border: 2px solid var(--save__btn-color);
+    color: var(--save__btn-color);
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 5px;
+    cursor: pointer;
+    padding: 4px 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.save__btn:hover {
+    background-color: var(--save__btn-color);
+    color: #fff;
+}
+.save__btn > i {
+    display: inline-flex;
+    vertical-align: top;
+}
+.save__btn > span {
+    line-height: 26px;
+    font-family: Josefin Sans;
+    font-size: 16px;
+}
+
+.saves__container {
+    display: inline-block;
+}

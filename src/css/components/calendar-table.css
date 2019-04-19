@@ -1,0 +1,15 @@
+.calendar__table-container {
+    display: inline-block;
+}
+.calendar__table-container * {
+    font-family: Josefin Sans;
+    font-size: 11.5px;
+}
+.calendar__table {
+    table-layout: fixed;
+    width: 500px;
+    overflow: visible;
+    color: var(--calendar-color);
+    border-collapse: collapse;
+    border-spacing: 0px;
+}

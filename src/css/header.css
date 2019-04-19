@@ -1,0 +1,18 @@
+.header {
+    background-color: var(--header-background-color);
+    color: #fff;
+    box-shadow: 0px 2px 3px grey;
+    z-index: 100;
+}
+    .header > div {
+        display: flex;
+        align-items: center;
+    }
+    .header span {
+        padding: 5px;
+    }
+
+
+
+
+

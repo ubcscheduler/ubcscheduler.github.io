@@ -1,0 +1,17 @@
+
+.course-container-header {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin: 5px;
+    font-size: 10px;
+    color: var(--course-container-color);
+    padding-left: 10px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.course-container {
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,28 @@
+.calendar__term-container {
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+.calendar__term-container * {
+    font-family: Josefin Sans;
+}
+.calendar__term {
+    display: inline-block;
+    border-radius: 2px;
+    border: 2px solid var(--calendar__term-color);
+    color: var(--calendar__term-color);
+    padding: 7px;
+    background-color: var(--calendar__term-background-color);
+    margin: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.calendar__term:hover {
+    color: var(--calendar__term-background-color);
+    background-color: var(--calendar__term--hover-color);
+    border: 2px solid var(--calendar__term--hover-color);
+}
+.calendar__term--selected {
+    color: #fff;
+    background-color: var(--calendar__term-color);
+}

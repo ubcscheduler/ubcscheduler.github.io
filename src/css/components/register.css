@@ -1,0 +1,36 @@
+.register__section {
+    line-height: 25px;
+    background-color: #fff;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.section__indicator {
+    float: left;
+    display: inline-flex;
+    vertical-align: top;
+    margin: 0px 10px;
+    color: var(--register__indicator-color);
+}
+.section__indicator--clicked {
+    color: var(--register__indicator--clicked-color);
+}
+
+
+.section__link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--course-container-color);
+}
+
+
+.register__section-container {
+    margin-bottom: 10px;
+}
+
+.register__clear-btn {
+    margin-bottom: 0px;
+}
