@@ -1,13 +1,11 @@
 # UBC Scheduler
-A course scheduler for UBC. Check out the site at <https://www.ubcscheduler.com> <br/>
+A course scheduler for UBC. Check out the site at <https://ubcscheduler.github.io/> <br/>
 Built in collaboration with https://github.com/shade
 
 ## Contents
   - [UBC Scheduler](#ubc-scheduler)
 - [Features](#features)
-- [Installation](#installation)
 - [How it's built](#api)
-  * [API](#api)
   * [Client](#client)
     + [store](#store)
     + [reducers](#reducers)
@@ -36,34 +34,7 @@ A major design goal for this scheduler is real-time feedback. Before, when sched
 ![ScreenShot](./demo.png)
 
 
-# Installation
-1. ``` git clone https://github.com/chrisjmyoon/ubcscheduler ```
-2. Install dependencies ```npm install ``` 
-3. Run both the api server and client app by ``` node app.js ```
-4. Run just the client app by ```npm start ```
-
-### Setting up API Server
-
-1. Install mongodb from ```https://docs.mongodb.com/manual/installation/```
-2. Run mongodb
-3. (Optional) in the api folder run ```node warmup.js``` to preload course/courselist from UBC
-
-
 # How it's built
-
-## API
-I used [Express](https://expressjs.com/) to as my web server framework. 
-The API listens for requests at the endpoints ```/api/v1/courselists``` and ```/api/v1/course/:courseCode``` from the client and returns the data from the database if a fresh copy no more than 12 hours old exists or from ubc ssc. 
-
-```app.js``` uses ```api/router.js``` to handle requests made to the two endpoints. 
-
-The router delegates how to handle the request to ```api/controller.js``` which queries the database for a _course_ object or _courselist_ object as defined by ```api/model.js```. 
-
-If the data does not exist, ```api/scraper.js``` scrapes the data in xml form from <https://courses.students.ubc.ca/cs/servlets/SRVCourseSchedule?sessyr=2017&sesscd=W&output=5&req=4&dept=CPSC&course=221>
-
-```api/rules.js``` stores helper functions to filter out sections that we are not interested in (for example, distance education courses with no times)
-
-Once the data is scraped, ```api/writer.js``` writes to the database and the controller sends the data back to the client. 
 
 #### _Design_
 I prefer using an api versus client side scraping because of some performance benefits of having data pre-processed, less bandwidth, scalability to more features (such as scraping seats available), and security. 
@@ -76,7 +47,7 @@ However, in the case that the api fails/crashes, the current client uses client 
 ## Client
 *! Note that this was my first project using React and React-Redux, so I most likely broke many standards and patterns*
 
-Built with React and React-Redux, App.js specifies the store (storing the state of our app) and components that compose our app. I used [create-react-app](https://github.com/facebook/create-react-app) to setup the project. I really liked https://www.youtube.com/watch?v=93p3LxR9xfM&t=1486s to understand react-redux. 
+Built with React and React-Redux, App.js specifies the store (storing the state of our app) and components that compose our app. I used [create-react-app](https://github.com/facebook/create-react-app) to setup the project. 
 
 ### store
 The store uses ```thunk```, ```schedulerMiddleware```, and ```saveMiddleware```. 
@@ -189,7 +160,7 @@ A valid schedule is a combination of one section from each activity type that do
 
 Starting with an empty array, we try adding a section from an activity type. If there is a collision, we stop searching that particular path.  
 
-A major optimization can be done by expressing schedules as an integer, where each bit correspond to 30 minute intervals starting from 8:00 to 10:00 (All UBC courses are in this domain, however, for other schools that may have smaller intervals, the same idea can be used where each bit represents a different interval).  
+Optimization can be done by expressing schedules as an integer, where each bit correspond to 30 minute intervals starting from 8:00 to 10:00 (All UBC courses are in this domain, however, for other schools that may have smaller intervals, the same idea can be used where each bit represents a different interval).  
 
 eg. 
 10:00am - 11:00am, 4:00pm - 5:00pm => (0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0)<sub>2</sub>
@@ -234,23 +205,3 @@ function schedule(m, t, w, r, f, count, acc) {
 			schedule(combinedM, combinedT, combinedW, combinedR, combinedF, count+1, acc)
 			acc.pop()			
 }
-```
-
-# Production
-Because of the api server, I didn't opt for a app-as-as-service-thingy but used a virtual machine. 
-
-1. Set up the virtual machine with a static ip running Ubuntu Server 18.04 with port 80 enabled
-https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal
-2. Clone project repo into virtual machine
-```git clone https://github.com/chrisjmyoon/ubcscheduler```
-3. Build optimal production code
-```sudo run npm build ```
-4. Set up nginx:
-https://medium.com/@utkarsh_verma/configure-nginx-as-a-web-server-and-reverse-proxy-for-nodejs-application-on-aws-ubuntu-16-04-server-872922e21d38
-5. Install and run mongodb and run warmup script
-	```
-	node warmup.js
-	```
-6. Connect domain (Google Domains) to static ip
-7. Use Cloudflare to provide SSL certificate (Getting the s in https for security as well as enabling protected browser capabilities such as webworkers)
-8. pm2 start app.js to listen to the port defined in the nginx setup (I used 8080)
