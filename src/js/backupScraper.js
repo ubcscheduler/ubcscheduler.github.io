@@ -71,7 +71,7 @@ export const scrapeCourse = (dispatch, course, preprocessCourse) => {
             "activity_types": {t1: [], t2: []}
         }
         let splitCourse = course.split(" ")
-        const sessURL = "&sessyr=2019&sesscd=W"
+        const sessURL = "&sessyr=2020&sesscd=W"
         const courseURL = `https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=${splitCourse[0]}&course=${splitCourse[1]}` + sessURL
         // swal({
         //     title: `Loading ${course}`,

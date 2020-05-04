@@ -87,7 +87,7 @@ module.exports.scrapeCourse = function (course) {
      
         let dept = course.split("_")[0]
         let courseCode = course.split("_")[1]
-        const XML_URL = `https://courses.students.ubc.ca/cs/servlets/SRVCourseSchedule?sessyr=2019&sesscd=W&output=5&req=4&dept=${dept}&course=${courseCode}`
+        const XML_URL = `https://courses.students.ubc.ca/cs/servlets/SRVCourseSchedule?sessyr=20202019&sesscd=W&output=5&req=4&dept=${dept}&course=${courseCode}`
 
         var courseObj = {
             "code": course,
@@ -151,7 +151,7 @@ module.exports.scrapeCourselist = function () {
         }
         var subjects = []
         // const SUBJ_URL = "https://courses.students.ubc.ca/cs/main?pname=subjarea&tname=subjareas&sessyr=2018&sesscd=W"
-        const SESS_URL = "&sessyr=2019&sesscd=W"
+        const SESS_URL = "&sessyr=2020&sesscd=W"
         const SUBJ_URL = "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-all-departments" + SESS_URL
         const BASE_URL = "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-department" + SESS_URL
         rp(SUBJ_URL)
